@@ -1,0 +1,57 @@
+﻿@model Galeri302.Models.Araclar
+
+@{
+    ViewBag.Title = "Araç Kaydı Sil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Please</h2>
+<h3>Are you sure to delete?</h3>
+
+<div>
+    <h4>Araç Bilgisi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(m => m.Marka) </dt>
+        <dd>@Html.DisplayFor(m => m.Marka)</dd>
+        <dt>@Html.DisplayNameFor(m => m.Model)</dt>
+        <dd>@Html.DisplayFor(m => m.Model)</dd>
+        <dt>@Html.DisplayNameFor(m => m.Km)</dt>
+        <dd>@Html.DisplayFor(m => m.Km)</dd>
+        <dt>@Html.DisplayNameFor(m => m.MotorGucu)</dt>
+        <dd>@Html.DisplayFor(m => m.MotorGucu)</dd>
+        <dt>@Html.DisplayNameFor(m => m.MotorHacmi)</dt>
+        <dd>@Html.DisplayFor(m => m.MotorHacmi)</dd>
+        <dt>@Html.DisplayNameFor(m => m.Ycity.Sehir)</dt>
+        <dd>@Html.DisplayFor(m => m.Ycity.Sehir)</dd>
+        <dt>@Html.DisplayNameFor(m => m.YYakitTipi.Ytipi)</dt>
+        <dd>@Html.DisplayFor(m => m.YYakitTipi.Ytipi)</dd>
+        <dt>@Html.DisplayNameFor(m => m.YVites.Vites)</dt>
+        <dd>@Html.DisplayFor(m => m.YVites.Vites)</dd>
+        <dt>@Html.DisplayNameFor(m => m.Durum)</dt>
+        <dd>@Html.DisplayFor(m => m.Durum)</dd>
+        <dt>@Html.DisplayNameFor(m => m.Aciklama)</dt>
+        <dd>@Html.DisplayFor(m => m.Aciklama)</dd>
+        <dt>@Html.DisplayNameFor(m => m.Yil)</dt>
+        <dd>@Html.DisplayFor(m => m.Yil)</dd>
+        <dt>@Html.DisplayNameFor(m => m.Foto)</dt>
+        <dd>@Html.DisplayFor(m => m.Foto)</dd>
+        <dt>@Html.DisplayNameFor(m => m.Renk)</dt>
+        <dd>@Html.DisplayFor(m => m.Renk)</dd>
+
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="from-actions no-color">
+
+            <input type="submit" value="sil" class="btn btn-danger" />
+            @Html.ActionLink("Listeye Geri Dön", "Index")
+
+        </div>
+    }
+</div>
+
+
